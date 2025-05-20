@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.5;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: #e50914;
+  }
+  
+  header {
+    background: #111;
+    border-bottom: 1px solid #222;
+  }
+  
+  .top-bar {
+    text-align: right;
+    padding: 5px 20px;
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+    letter-spacing: 2px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .auth-links {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .hero-section {
+    position: relative;
+    height: 70vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    z-index: 0;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3em;
+    color: #e50914;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    color: #ddd;
+  }
+  
+  .hero-content strong {
+    color: #e50914;
+  }
+  
+  .feature-tags {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    font-size: 0.85em;
+    flex-wrap: wrap;
+    color: #aaa;
+  }
+  
+  .feature-tags span:hover {
+    color: #e50914;
+    cursor: pointer;
+  }
+  
+  .car-gallery {
+    padding: 60px 40px;
+    background: #111;
+    text-align: center;
+  }
+  
+  .car-gallery h2 {
+    font-size: 2em;
+    color: #e50914;
+    margin-bottom: 40px;
+  }
+  
+  .car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  
+  .car-card {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .car-card:hover {
+    transform: scale(1.03);
+    border-color: #e50914;
+  }
+  
+  .car-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .car-card p {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  
+  footer {
+    background: #111;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #666;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    margin: 0 10px;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .footer-links a:hover {
+    color: #e50914;
+  }
