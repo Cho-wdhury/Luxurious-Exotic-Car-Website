@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style200.css">
+  <style>
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+    header h1 {
+      color: red;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .nav-btn {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: red;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin: 10px;
+      opacity: 0;
+      animation: slideIn 0.6s ease-out forwards;
+    }
+    .nav-btn:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .nav-btn:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .nav-btn:hover {
+      background-color: #d40000;
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .register-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: red;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .register-btn:hover {
+      background-color: #d40000;
+    }
+
+    .contact-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .contact-header h1 {
+      color: red;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .contact-header p {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+    
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      animation: fadeInUp 1s ease-out;
+    }
+    .contact-info {
+      max-width: 350px;
+      text-align: left;
+    }
+    .info-item {
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInItem 1s ease-out forwards;
+    }
+    .info-item:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    .info-item:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    .info-item:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+    .info-item:nth-child(4) {
+      animation-delay: 0.7s;
+    }
+    .info-item h3 {
+      color: red;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+    .info-item p {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    /* FS */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInItem {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(-50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      header h1 {
+        margin-bottom: 10px;
+      }
+      .nav-btn {
+        display: block;
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Luxurious Exotic Cars</h1>
+  <a href="homepage.html" class="nav-btn">Homepage</a>
+  <a href="explore.html" class="nav-btn">Explore Cars</a>
+  <a href="reg.php" class="register-btn">Register</a>
+</header>
+
+<section class="contact-section">
+  <div class="contact-header">
+    <h1>Contact Us</h1>
+    <p>"Step into elegance — we’re here to turn your car dreams into reality."</p>
+  </div>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="info-item">
+        <h3>Location</h3>
+        <p>Bangladesh Army University of Engineering & Technology<br>
+           Qadirabad 6431, Natore District
+        </p>
+      </div>
+      <div class="info-item">
+        <h3>Phone</h3>
+        <p>01701766529</p>
+      </div>
+      <div class="info-item">
+        <h3>Email</h3>
+        <p><a href="mailto:luxriouscar.com" style="color: #fff; text-decoration: none;">luxriouscar.com</a></p>
+      </div>
+      <div class="info-item">
+        <h3>Open Hours</h3>
+        <p>Mon: 10am – 5pm<br>
+           Tue: 10am – 5pm<br>
+           Wed: Closed<br>
+           Thu: 10am – 5pm<br>
+           Fri: 10am – 3pm<br>
+           Sat: 10am – 3pm<br>
+           Sun: Closed
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
