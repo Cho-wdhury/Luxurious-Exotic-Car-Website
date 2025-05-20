@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Brand</title>
+  <link rel="stylesheet" href="style67.css" />
+  <style>
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; 
+      position: relative;
+    }
+    h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 2rem;
+      text-align: center;
+      flex: 1; 
+      width: 100%; 
+      display: flex;
+      justify-content: center; 
+    }
+    .register-btn, .explore-btn {
+      padding: 10px 20px;
+      background-color: red;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .register-btn:hover, .explore-btn:hover {
+      background-color: #d40000;
+    }
+    .register-btn {
+      margin-left: auto; 
+    }
+    .explore-btn {
+      margin-left: 20px; 
+    }
+
+    
+    .top-brand-section {
+      text-align: center;
+      width: 80%;
+      margin-top: 50px;
+    }
+    .section-title {
+      font-size: 2.5em;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    .brand-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      justify-items: center;
+      margin-top: 20px;
+    }
+    .brand-card {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out;
+      width: 220px; 
+      height: 300px; /* FS */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .brand-card img {
+      width: 100%;
+      height: 180px; 
+      object-fit: cover;
+      border-bottom: 2px solid #444;
+    }
+    .brand-card p {
+      padding: 10px;
+      background-color: #333;
+      margin: 0;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .brand-card:hover {
+      transform: scale(1.1);
+    }
+
+   
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .register-btn, .explore-btn {
+        margin-left: 0;
+        margin-top: 10px; 
+      }
+      .brand-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .brand-container {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 1.5rem; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Luxurious Exotic Cars</h1>
+    <a href="reg.php" class="register-btn">Register</a>
+    <a href="explore.html" class="explore-btn">Explore Cars</a>
+  </header>
+
+  <section class="top-brand-section">
+    <h2 class="section-title">All Brand</h2>
+    <div class="brand-container">
+      
+      <div class="brand-card">
+        <a href="https://www.ferrari.com" target="_blank"><img src="fre.jpg" alt="Ferrari"></a>
+        <p>Ferrari</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.rolls-roycemotorcars.com" target="_blank"><img src="roll.jpg" alt="Rolls-Royce"></a>
+        <p>Rolls-Royce</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.lamborghini.com" target="_blank"><img src="lam (2).jpg" alt="Lamborghini"></a>
+        <p>Lamborghini</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.bugatti.com" target="_blank"><img src="bogan.jpg" alt="Bugatti"></a>
+        <p>Bugatti</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.bentleymotors.com" target="_blank"><img src="bently.jpg" alt="Bentley"></a>
+        <p>Bentley</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.mclaren.com" target="_blank"><img src="mac.jpg" alt="McLaren"></a>
+        <p>McLaren</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.astonmartin.com" target="_blank"><img src="aston.jpg" alt="Aston Martin"></a>
+        <p>Aston Martin</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.porsche.com" target="_blank"><img src="por.jpg" alt="Porsche"></a>
+        <p>Porsche</p>
+      </div>
+
+      
+      <div class="brand-card">
+        <a href="https://www.koenigsegg.com" target="_blank"><img src="koe.jpg" alt="Koenigsegg"></a>
+        <p>Koenigsegg</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.pagani.com" target="_blank"><img src="pag.jpg" alt="Pagani"></a>
+        <p>Pagani</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.mercedes-benz.com" target="_blank"><img src="mer.jpg" alt="Mercedes-Benz"></a>
+        <p>Mercedes-Benz</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.bmw.com" target="_blank"><img src="bmw.jpg" alt="BMW"></a>
+        <p>BMW</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.audi.com" target="_blank"><img src="audi.jpg" alt="Audi"></a>
+        <p>Audi</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.maserati.com" target="_blank"><img src="marsi.jpg" alt="Maserati"></a>
+        <p>Maserati</p>
+      </div>
+
+      
+      <div class="brand-card">
+        <a href="https://www.jaguar.com" target="_blank"><img src="jagu.jpg" alt="Jaguar"></a>
+        <p>Jaguar</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.tesla.com" target="_blank"><img src="tes.jpg" alt="Tesla"></a>
+        <p>Tesla</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.lexus.com" target="_blank"><img src="lex.jpg" alt="Lexus"></a>
+        <p>Lexus</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.mclaren.com" target="_blank"><img src="macco.jpg" alt="McLaren"></a>
+        <p>McLaren</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.cadillac.com" target="_blank"><img src="cadilac.jpg" alt="Cadillac"></a>
+        <p>Cadillac</p>
+      </div>
+      <div class="brand-card">
+        <a href="https://www.alfaromeo.com" target="_blank"><img src="alfa.jpg" alt="Alfa Romeo"></a>
+        <p>Alfa Romeo</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
