@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxurious Exotic Cars</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    header h1 { font-size: 2em; }
+
+    .register-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    .register-btn:hover {
+      background-color: darkred;
+    }
+
+    nav.brand-nav {
+      background-color: #111;
+      padding: 15px 0;
+      text-align: center;
+      position: sticky;
+      top: 80px;
+      z-index: 998;
+    }
+    nav.brand-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav.brand-nav ul li {
+      margin: 0 15px;
+    }
+    nav.brand-nav ul li a {
+      color: red;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Arial Black', sans-serif;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+    nav.brand-nav ul li a:hover {
+      text-shadow: 0 0 5px red;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2em;
+      color: red;
+      text-shadow: 0 0 5px #ff0000aa;
+      margin-bottom: 20px;
+    }
+
+    .car-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .car {
+      perspective: 1000px;
+      width: 300px;
+      height: 280px;
+      cursor: pointer;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .car .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+    }
+
+    .car.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border: 2px solid #555;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(255,0,0,0.4);
+    }
+
+    .card-front {
+      background-color: #111;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .card-front h3 {
+      font-size: 1em;
+      margin-top: 10px;
+      color: white;
+      text-shadow: 0 0 1px red;
+    }
+
+    .card-back {
+      background-color: #222;
+      color: white;
+      transform: rotateY(180deg);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    html::-webkit-scrollbar { width: 10px; }
+    html::-webkit-scrollbar-thumb { background: red; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Luxurious Exotic Cars</h1>
+    <a href="reg.php" class="register-btn">Register</a>
+  </header>
+
+  <nav class="brand-nav">
+    <ul>
+      <li><a href="#ferrari">Ferrari</a></li>
+      <li><a href="#lamborghini">Lamborghini</a></li>
+      <li><a href="#bugatti">Bugatti</a></li>
+      <li><a href="#mclaren">McLaren</a></li>
+      <li><a href="#rollsroyce">Rolls-Royce</a></li>
+    </ul>
+  </nav>
+
+  <!-- Ferrari -->
+  <section id="ferrari">
+    <h2>Ferrari</h2>
+    <div class="car-gallery">
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="fer car details.jpg" alt="Ferrari SF90">
+            <h3>2023 Ferrari SF90 Spider</h3>
+          </div>
+          <div class="card-back">
+            <h4>2023 Ferrari SF90 Spider</h4>
+            <p>Price: USA $351,400+, BD ৳42,00,000+<br>Engine: 3.0L Twin-Turbo V6 Hybrid<br>Horsepower: 819 hp<br>Top Speed: 330 km/h<br>0–100 km/h: 2.9 sec</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="fer car detail2.avif" alt="Ferrari 296 GTB">
+            <h3>2025 Ferrari 296 GTB</h3>
+          </div>
+          <div class="card-back">
+            <h4>2025 Ferrari 296 GTB</h4>
+            <p>Price: USA $346,950+, BD ৳42,00,000+<br>Engine: 2.9L twin-turbo V6 hybrid<br>Horsepower: 819 hp<br>Top Speed: 330 km/h<br>0–100 km/h: 2.9 sec</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lamborghini -->
+  <section id="lamborghini">
+    <h2>Lamborghini</h2>
+    <div class="car-gallery">
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="lam car detail1.jpeg" alt="Lamborghini Huracan">
+            <h3>2023 Lamborghini Huracán Evo</h3>
+          </div>
+          <div class="card-back">
+            <h4>2023 Lamborghini Huracán Evo</h4>
+            <p>Price: USA $261,274+, BD ৳33,50,000+<br>Engine: 5.2L V10<br>Horsepower: 630 hp<br>Top Speed: 325 km/h<br>0–100 km/h: 2.9 sec</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="lam car detail 3.jpg" alt="Lamborghini Aventador">
+            <h3>2025 Lamborghini Aventador S</h3>
+          </div>
+          <div class="card-back">
+            <h4>2025 Lamborghini Aventador S</h4>
+            <p>Price: USA $421,000+, BD ৳45,00,000+<br>Engine: 6.5L V12<br>Horsepower: 730 hp<br>Top Speed: 350 km/h<br>0–100 km/h: 2.8 sec</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bugatti -->
+  <section id="bugatti">
+    <h2>Bugatti</h2>
+    <div class="car-gallery">
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="boga car detail 1.jpg" alt="Bugatti Chiron">
+            <h3>2023 Bugatti Chiron Sport</h3>
+          </div>
+          <div class="card-back">
+            <h4>2023 Bugatti Chiron Sport</h4>
+            <p>Price: USA $3,000,000+, BD ৳50,00,000+<br>Engine: 8.0L Quad-Turbo W16<br>Horsepower: 1,479 hp<br>Top Speed: 420 km/h<br>0–100 km/h: 2.4 sec</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="boga car detail 2.jpg" alt="Bugatti Divo">
+            <h3>2025 Bugatti Divo</h3>
+          </div>
+          <div class="card-back">
+            <h4>2025 Bugatti Divo</h4>
+            <p>Price: USA $5,000,000+, BD ৳60,00,000+<br>Engine: 8.0L quad-turbo W16<br>Horsepower: 1,500 hp<br>Top Speed: 380 km/h<br>0–100 km/h: 2.4 sec</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- McLaren -->
+  <section id="mclaren">
+    <h2>McLaren</h2>
+    <div class="car-gallery">
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="mac car detail1.jpg" alt="McLaren 720S">
+            <h3>2023 McLaren 720S</h3>
+          </div>
+          <div class="card-back">
+            <h4>2023 McLaren 720S</h4>
+            <p>Price: USA $300,000+, BD ৳38,00,000+<br>Engine: 4.0L Twin-Turbo V8<br>Horsepower: 710 hp<br>Top Speed: 341 km/h<br>0–100 km/h: 2.7 sec</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="mac car detail 2.jpeg" alt="McLaren Artura">
+            <h3>2025 McLaren Artura</h3>
+          </div>
+          <div class="card-back">
+            <h4>2025 McLaren Artura</h4>
+            <p>Price: USA $225,000+, BD ৳35,00,000+<br>Engine: 3.0L twin-turbo V6 hybrid<br>Horsepower: 671 hp<br>Top Speed: 330 km/h<br>0–100 km/h: 3.0 sec</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rolls-Royce -->
+  <section id="rollsroyce">
+    <h2>Rolls-Royce</h2>
+    <div class="car-gallery">
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="ghost car detail1.jpg" alt="Rolls-Royce Ghost">
+            <h3>2023 Rolls-Royce Ghost</h3>
+          </div>
+          <div class="card-back">
+            <h4>2023 Rolls-Royce Ghost</h4>
+            <p>Price: USA $343,350+, BD ৳50,00,000+<br>Engine: 6.75L V12<br>Horsepower: 563 hp<br>Top Speed: 250 km/h<br>0–100 km/h: 4.6 sec</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="car" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="ghost car detail 2.jpg" alt="Rolls-Royce Cullinan">
+            <h3>2025 Rolls-Royce Cullinan</h3>
+          </div>
+          <div class="card-back">
+            <h4>2025 Rolls-Royce Cullinan</h4>
+            <p>Price: USA $335,350+, BD ৳52,00,000+<br>Engine: 6.75L V12<br>Horsepower: 563 hp<br>Top Speed: 250 km/h<br>0–100 km/h: 5.0 sec</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

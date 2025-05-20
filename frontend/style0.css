@@ -1,0 +1,30 @@
+.brand {
+    width: 120px;
+    background-color: #1c1c1c;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.1);
+  }
+  
+  .brand img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: brightness(1.1);
+  }
+  
+  .brand p {
+    color: #ff4d4d;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .brand:hover {
+    transform: scale(1.1);
+    background-color: #222;
+  }
+  
+  
